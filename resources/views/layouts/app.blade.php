@@ -25,7 +25,7 @@
                         <a class="nav-link" href="{{ url('/products') }}">All Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/products/create') }}">Create Product</a>
+                        <a class="btn btn-primary" href="{{ url('/products/create') }}">Create Product</a>
                     </li>
                 </ul>
             </div>

@@ -9,7 +9,8 @@
         {{ session('success') }}
     </div>
     @endif
-
+    <div class="row">
+    <div class="col-md-6">
     <form action="{{ url('/products/' )  }}" method="GET" class="mb-3">
         @csrf
         <div class="input-group">
@@ -18,8 +19,8 @@
         </div>
     </form>
 
- 
-    <div class="mb-3">
+    </div>
+    <div class="col-md-6 mb-3">
         <strong>Sort By:</strong>
         <a href="{{ route('products.index', ['sort_by' => 'name', 'sort_order' => (request('sort_by') == 'name' && request('sort_order') == 'asc') ? 'desc' : 'asc']) }}" class="btn btn-secondary">
             Sort by Name ({{ request('sort_by') == 'name' && request('sort_order') == 'asc' ? 'Descending' : 'Ascending' }})
@@ -30,7 +31,7 @@
         </a>
 
     </div>
-
+    </div>
 
     <table class="table table-bordered table-striped">
         <thead>
